@@ -1,0 +1,46 @@
+#include<iostream.h>
+#include<conio.h>
+class ABC
+{
+int a,b,c;
+public:
+void getnumbers();
+int largest();
+void putnumbers();
+};
+
+void ABC::getnumbers()
+{
+cout<<"\n Enter any three numbers:";
+cin>>a>>b>>c;
+cout<<"\n Entered numbers are:"<<a<<b<<c;
+}
+int ABC::largest()
+{
+if(a>b&&a>c)
+{
+return(a);
+}
+else if(b>c&&b>a)
+{
+return(b);
+}
+else
+{
+return(c);
+}
+}
+void ABC:: putnumbers()
+{
+cout<<"\n\n largest number is:"<<largest();
+}
+
+int main()
+{
+ABC obj;
+clrscr();
+obj.getnumbers();
+obj.putnumbers();
+getch();
+return 0;
+}
